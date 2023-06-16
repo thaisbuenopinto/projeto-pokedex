@@ -1,10 +1,28 @@
+import { Header } from "../../components/Header/header"
+import { GlobalContext } from "../../contexts/GlobalContext";
+import { PagePokedex } from "./PokedexStyled";
+import { useContext } from "react";
+import { PokeCard } from "../../components/Cards/cards";
 
+export function Pokedex ({setDetail}) {
 
-export function Pokedex () {
+    const context = useContext(GlobalContext)
+    const {pokedex} = context
 
     return (    
         <div>
-            <h1>OLA</h1>
+            <Header/>
+            <PagePokedex>
+                {pokedex.map((pokePokedex) => (
+                    <PokeCard
+                        
+                        pokemon={pokePokedex}
+                        
+                       
+                    />
+                ))}
+            </PagePokedex>
+           
         </div>
     )
 }

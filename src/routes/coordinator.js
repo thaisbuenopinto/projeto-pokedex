@@ -6,11 +6,13 @@ export function goToLoginPage (navigate) {
     )
 }
 
-export function goToDetailPage (navigate) {
+ export function goToDetailPage (navigate) {
     return (
-        navigate('/detalhes')
+        navigate('/detail')
     )
-}
+} 
+
+
 export function goToPokePage (navigate) {
     return (
         navigate('/pokedex')
